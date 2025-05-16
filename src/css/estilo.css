@@ -8,8 +8,8 @@
     --color-font1: #fff;
     --color-font2:#fff;
     --color-font3:red;
-    --color-font4: #fff;
-    --gradient: linear-gradient(to top, rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.3));
+    --color-font4: black;
+    --gradient: linear-gradient(to top, rgba(0,0,0,0.6), rgba(0,0,0,0.3));
     --border-radius: 20px;
     --font-size: 1rem;
 }
@@ -20,7 +20,7 @@ html{
 }
 
 body{
-    background-color: transparent;
+    background: transparent;
 }
 
 img{
@@ -98,47 +98,46 @@ span{
     transition: .5s;
 }
 
-@media(width <= 700px){
+@media(width <= 1024px){
     .header-menu{
         width: 100%;
         height: 100vh;
-        background-color: var(--color-font3);
+        background: var(--gradient);
         position: absolute;
-        z-index: 1;
-        top: 0;
+        z-index:1;
+        top:0;
         left: -100%;
-        gap: 6rem;
+        gap:6rem;
         text-align: center;
         flex-direction: column;
         justify-content: center;
-        transform: .5s;
+        transition: .5s;
     }
     
+    
     #titulo{
-        font-size: 2rem;    
+        font-size: 2rem;
     }
-
-    #titulo span{
-        margin-left: 5px;
-    }
-
+    /*Menu Hamburguer*/
+    
     .active{
         left: 0;
     }
-
+    
     .hamburguer{
         display: block;
+        z-index: 2;
     }
-
+    
     .hamburguer.active .barra:first-child{
         transform: translateY(8px) rotate(360deg) rotate(45deg);
     }
-
     .hamburguer.active .barra:nth-child(2){
         opacity: 0;
     }
-
     .hamburguer.active .barra:last-child{
-        transform: translateY(-8px) rotate(-360deg) rotate(-45deg);
+        transform:translateY(-8px) rotate(-360deg) rotate(-45deg);
     }
-}
+    
+    
+    }
